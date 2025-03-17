@@ -1,0 +1,53 @@
+<section id="photo-carousel" class="overflow-hidden whitespace-nowrap relative w-full py-24 flex flex-col gap-6">
+  <div class="flex gap-6 animate-scroll">
+    <img class="h-72 cursor-pointer" src="/images/3019d_02.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_04.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_05.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_08.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_10.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_11.webp">
+  </div>
+  <div class="flex gap-6 animate-scroll animate-reverse">
+    <img class="h-72 cursor-pointer" src="/images/3019d_12.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_13.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_14.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_15.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_16.webp">
+    <img class="h-72 cursor-pointer" src="/images/3019d_17.webp">
+  </div>
+
+  <p class="px-12 text-sm text-slate-600">
+    A few photos show the home as it was professionally staged in 2020. While the layout remains the same, the home is currently furnished.
+  </p>
+</section>
+
+<dialog id="photoDialog" class="fixed inset-0 bg-black bg-opacity-75 h-screen w-screen m-0 flex-col justify-between max-w-full max-h-full">
+  <div class="flex justify-end">
+  <button id="closeButton" class="p-2 border border-transparent hover:border-white/40 rounded-full transition focus:outline-0 m-3">
+    <svg class="h-8 w-8 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M4.11654 18.116C3.62839 18.6041 3.62839 19.3956 4.11654 19.8838C4.6047 20.3719 5.39616 20.3719 5.88431 19.8838L19.8843 5.88376C20.3725 5.39561 20.3725 4.60415 19.8843 4.11599C19.3962 3.62784 18.6047 3.62784 18.1165 4.11599L4.11654 18.116Z"/>
+    <path d="M5.88434 4.11599C5.39619 3.62784 4.60473 3.62784 4.11657 4.11599C3.62842 4.60415 3.62842 5.39561 4.11657 5.88376L18.1166 19.8838C18.6047 20.3719 19.3962 20.3719 19.8843 19.8838C20.3725 19.3956 20.3725 18.6041 19.8843 18.116L5.88434 4.11599Z"/>
+    </svg>
+  </button>
+  </div>
+  <div class="flex justify-between items-center select-none">
+    <button id="prevButton" class="p-2 border border-transparent hover:border-white/40 rounded-full transition focus:outline-0 m-3">
+      <svg class="h-8 w-8 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M9 12C9 12.5523 9.44772 13 10 13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11H10C9.44772 11 9 11.4477 9 12Z"/>
+      <path d="M10.4719 7.11807C10.7971 7.29209 11.0001 7.63095 11.0001 7.99976V15.9998C11.0001 16.3685 10.7971 16.7074 10.472 16.8814C10.1468 17.0554 9.75227 17.0364 9.44541 16.8318L3.44541 12.8322C3.16721 12.6468 3.00009 12.3345 3.00008 12.0002C3.00006 11.6658 3.16715 11.3536 3.44534 11.1681L9.44534 7.16773C9.75219 6.96314 10.1467 6.94406 10.4719 7.11807Z"/>
+      </svg>
+    </button>
+    <div>
+    <img id="modalImage" class="hidden" src="" alt="Expanded View">
+    </div>
+    <button id="nextButton" class="p-2 border border-transparent hover:border-white/40 rounded-full transition focus:outline-0 m-3">
+      <svg class="h-8 w-8 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M3 12C3 11.4477 3.44772 11 4 11H14C14.5523 11 15 11.4477 15 12C15 12.5523 14.5523 13 14 13H4C3.44772 13 3 12.5523 3 12Z"/>
+      <path d="M13.5281 7.11834C13.8533 6.94431 14.2478 6.96337 14.5547 7.16793L20.5547 11.1676C20.8329 11.353 21 11.6652 21 11.9996C21 12.3339 20.8329 12.6462 20.5547 12.8317L14.5547 16.832C14.2479 17.0366 13.8533 17.0557 13.5282 16.8817C13.203 16.7077 13 16.3688 13 16L13 8C13 7.63121 13.203 7.29236 13.5281 7.11834Z"/>
+      </svg>
+    </button>
+  </div>
+  <div id="thumbnailRow" class="flex gap-2 justify-center pb-3 select-none">
+    <div class="thumbnailContainer"></div>
+  </div>
+</dialog>
