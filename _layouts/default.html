@@ -13,12 +13,12 @@
       {% endif %}
     </title>
     <meta name="robots" content="noindex, nofollow">
-    {% if page.description %}
-      <meta name="description" content="{{ page.description }}">
+    {% if site.description %}
+      <meta name="description" content="{{ site.description }}">
     {% endif %}
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Modern Alki Beach Townhome – For Sale by Owner">
-    <meta property="og:description" content="Bright 3-bed townhome with rooftop deck, open layout, and no HOA. Walk to Alki Beach. Listed at $849,000.">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
     <meta property="og:url" content="https://alkitownhome.com">
     <meta property="og:image" content="https://alkitownhome.com/images/3019d_02.webp">
     <link rel="stylesheet" href="{{ "/styles/main.css" | relative_url }}">  
