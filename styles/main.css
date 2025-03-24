@@ -1,6 +1,28 @@
----
----
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "../_includes/**/*.{html,md,js}";
+@source "../_layouts/**/*.{html,md,js}";
+@source "../_pages/**/*.{html,md}";
+@source "../_posts/**/*.{html,md}";
+@source "../scripts/**/*.js";
+@source "../*.{html,md}";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-lora: "Lora", serif;	
+
+  --animate-kenburns: kenburns 10s infinite alternate ease-in-out;
+  --animate-scroll: scroll 60s linear infinite;
+  
+  @keyframes kenburns {
+	0% { transform: scale(1.1); }
+	50% { transform: scale(1.05); }
+	100% { transform: scale(1); }
+  }
+  @keyframes scroll {
+  	from { transform: translateX(0); }
+  	to { transform: translateX(-50%); }
+  }
+}

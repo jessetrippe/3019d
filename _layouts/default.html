@@ -3,18 +3,29 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/styles/main.css" | relative_url }}">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  
+    <title>
+      {% if page.title and site.title %}
+        {{ page.title }} - {{ site.title }}
+      {% elsif page.title %}
+        {{ page.title }}
+      {% elsif site.title %}
+        {{ site.title }}
+      {% endif %}
+    </title>
+    <meta name="robots" content="noindex, nofollow">
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Modern Alki Beach Townhome – For Sale by Owner">
+    <meta property="og:description" content="Bright 3-bed townhome with rooftop deck, open layout, and no HOA. Walk to Alki Beach. Listed at $849,000.">
+    <meta property="og:url" content="https://alkitownhome.com">
+    <meta property="og:image" content="https://alkitownhome.com/images/3019d_02.webp">
+    <link rel="stylesheet" href="{{ "/styles/main.css" | relative_url }}">  
   </head>
   <body class="font-inter antialiased">
     {{ content }}
     
-    <link rel="stylesheet" href="{{ "/styles/main.css" | relative_url }}">
     <script src="{{ "/scripts/main.js" | relative_url }}"></script>
   </body>
 </html>

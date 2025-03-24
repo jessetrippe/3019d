@@ -1,14 +1,14 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "3019 62nd Ave SW, Unit D, Seattle, WA 98116" # the name of your site, e.g. ACME Corp.
+title: "Modern Alki Beach Townhome – 3 Bed · Rooftop Deck · No HOA"
+description: "Light-filled 2020-built townhome in West Seattle, just blocks from the beach. Features include an open-concept main level, oversized primary suite, energy-efficient mini-splits, and a spacious rooftop deck. Walkable to Alki Trail, coffee shops, and restaurants. Listed at $849,000 — no HOA fees."
 
-plugins:
-  - jekyll-postcss
-
-postcss:
-  cache: false
-
-css_dir: "styles"
-
+# Exclude from processing
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - postcss.config.js
+  - README.md
+  
 include:
-  - _pages/
+  - _pages
