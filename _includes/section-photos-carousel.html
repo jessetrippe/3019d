@@ -1,52 +1,49 @@
-<section id="photo-carousel" class="overflow-hidden whitespace-nowrap relative w-full py-24 flex flex-col gap-6">
-  <div class="flex gap-6 animate-scroll">
-    <img class="h-72 cursor-pointer" src="/images/3019d_02.webp" width="1086" height="723" alt="Townhome kitchen 1" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_04.webp" width="1086" height="723" alt="Townhome living room 1" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_05.webp" width="1086" height="723" alt="Townhome living room 2" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_08.webp" width="1086" height="723" alt="Townhome kitchen 2" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_10.webp" width="1086" height="723" alt="Townhome study" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_11.webp" width="1086" height="723" alt="Townhome bathroom" loading="lazy">
+<section id="photo-carousel" class="relative flex w-full flex-col gap-6 overflow-hidden py-24 whitespace-nowrap">
+  <div class="animate-scroll flex gap-6">
+    <img class="h-72 cursor-pointer" src="/images/3019d_02.webp" width="1086" height="723" alt="Townhome kitchen 1" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_04.webp" width="1086" height="723" alt="Townhome living room 1" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_05.webp" width="1086" height="723" alt="Townhome living room 2" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_08.webp" width="1086" height="723" alt="Townhome kitchen 2" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_10.webp" width="1086" height="723" alt="Townhome study" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_11.webp" width="1086" height="723" alt="Townhome bathroom" loading="lazy" />
   </div>
-  <div class="flex gap-6 animate-scroll [animation-direction:reverse]">
-    <img class="h-72 cursor-pointer" src="/images/3019d_12.webp" width="1086" height="723" alt="Townhome bedroom" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_13.webp" width="1086" height="723" alt="Townhome master bedroom" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_14.webp" width="1086" height="723" alt="Townhome master bathroom 1" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_15.webp" width="1086" height="723" alt="Townhome master bathroom 2" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_16.webp" width="1024" height="682" alt="Townhome rooftop patio" loading="lazy">
-    <img class="h-72 cursor-pointer" src="/images/3019d_17.webp" width="1024" height="576" alt="Townhome aerial view" loading="lazy">
+  <div class="animate-scroll flex gap-6 [animation-direction:reverse]">
+    <img class="h-72 cursor-pointer" src="/images/3019d_12.webp" width="1086" height="723" alt="Townhome bedroom" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_13.webp" width="1086" height="723" alt="Townhome master bedroom" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_14.webp" width="1086" height="723" alt="Townhome master bathroom 1" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_15.webp" width="1086" height="723" alt="Townhome master bathroom 2" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_16.webp" width="1024" height="682" alt="Townhome rooftop patio" loading="lazy" />
+    <img class="h-72 cursor-pointer" src="/images/3019d_17.webp" width="1024" height="576" alt="Townhome aerial view" loading="lazy" />
   </div>
 
-  <p class="px-12 text-sm text-slate-600">
-    A few photos show the home as it was professionally staged in 2020. While the layout remains the same, the home is currently furnished.
-  </p>
+  <p class="px-12 text-sm text-slate-600">A few photos show the home as it was professionally staged in 2020. While the layout remains the same, the home is currently furnished.</p>
 </section>
 
-<dialog id="photoDialog" class="fixed inset-0 bg-black bg-opacity-75 h-screen w-screen m-0 flex-col justify-between max-w-full max-h-full">
+<dialog id="photoDialog" class="bg-opacity-75 fixed inset-0 m-0 h-screen max-h-full w-screen max-w-full flex-col justify-between bg-black">
   <div class="flex justify-end">
-  <button id="closeButton" class="p-2 border border-transparent hover:border-white/40 rounded-full transition focus:outline-0 m-6 cursor-pointer">
-    <svg class="h-8 w-8 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M4.11654 18.116C3.62839 18.6041 3.62839 19.3956 4.11654 19.8838C4.6047 20.3719 5.39616 20.3719 5.88431 19.8838L19.8843 5.88376C20.3725 5.39561 20.3725 4.60415 19.8843 4.11599C19.3962 3.62784 18.6047 3.62784 18.1165 4.11599L4.11654 18.116Z"/>
-    <path d="M5.88434 4.11599C5.39619 3.62784 4.60473 3.62784 4.11657 4.11599C3.62842 4.60415 3.62842 5.39561 4.11657 5.88376L18.1166 19.8838C18.6047 20.3719 19.3962 20.3719 19.8843 19.8838C20.3725 19.3956 20.3725 18.6041 19.8843 18.116L5.88434 4.11599Z"/>
-    </svg>
-  </button>
+    <button id="closeButton" class="m-6 cursor-pointer rounded-full border border-transparent p-2 transition hover:border-white/40 focus:outline-0">
+      <svg class="h-8 w-8 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M4.11654 18.116C3.62839 18.6041 3.62839 19.3956 4.11654 19.8838C4.6047 20.3719 5.39616 20.3719 5.88431 19.8838L19.8843 5.88376C20.3725 5.39561 20.3725 4.60415 19.8843 4.11599C19.3962 3.62784 18.6047 3.62784 18.1165 4.11599L4.11654 18.116Z" />
+        <path d="M5.88434 4.11599C5.39619 3.62784 4.60473 3.62784 4.11657 4.11599C3.62842 4.60415 3.62842 5.39561 4.11657 5.88376L18.1166 19.8838C18.6047 20.3719 19.3962 20.3719 19.8843 19.8838C20.3725 19.3956 20.3725 18.6041 19.8843 18.116L5.88434 4.11599Z" />
+      </svg>
+    </button>
   </div>
-  <div class="flex justify-between items-center select-none">
-    <button id="prevButton" class="p-2 border border-transparent hover:border-white/40 rounded-full transition focus:outline-0 m-6 cursor-pointer">
+  <div class="flex items-center justify-between select-none">
+    <button id="prevButton" class="m-6 cursor-pointer rounded-full border border-transparent p-2 transition hover:border-white/40 focus:outline-0">
       <svg class="h-12 w-12 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M15.287 5.30711C15.5672 5.42319 15.75 5.69667 15.75 6.00002L15.75 18C15.75 18.3034 15.5673 18.5768 15.287 18.6929C15.0068 18.809 14.6842 18.7449 14.4697 18.5304L8.46967 12.5305C8.17678 12.2376 8.17677 11.7627 8.46966 11.4698L14.4696 5.4697C14.6841 5.2552 15.0067 5.19103 15.287 5.30711Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.287 5.30711C15.5672 5.42319 15.75 5.69667 15.75 6.00002L15.75 18C15.75 18.3034 15.5673 18.5768 15.287 18.6929C15.0068 18.809 14.6842 18.7449 14.4697 18.5304L8.46967 12.5305C8.17678 12.2376 8.17677 11.7627 8.46966 11.4698L14.4696 5.4697C14.6841 5.2552 15.0067 5.19103 15.287 5.30711Z" />
       </svg>
     </button>
     <div>
-    <img id="modalImage" class="hidden" src="" alt="Expanded View">
+      <img id="modalImage" class="hidden" src="" alt="Expanded View" />
     </div>
-    <button id="nextButton" class="p-2 border border-transparent hover:border-white/40 rounded-full transition focus:outline-0 m-6 cursor-pointer">
+    <button id="nextButton" class="m-6 cursor-pointer rounded-full border border-transparent p-2 transition hover:border-white/40 focus:outline-0">
       <svg class="h-12 w-12 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.71304 5.30711C8.99329 5.19103 9.31588 5.25519 9.53038 5.46969L15.5303 11.4697C15.8232 11.7626 15.8232 12.2375 15.5303 12.5304L9.53033 18.5304C9.31583 18.7449 8.99324 18.809 8.71299 18.6929C8.43273 18.5768 8.25 18.3034 8.25 18L8.25005 6.00002C8.25005 5.69667 8.43278 5.4232 8.71304 5.30711Z" />
-        </svg>
       </svg>
     </button>
   </div>
-  <div id="thumbnailRow" class="flex gap-2 justify-center pb-12 select-none">
+  <div id="thumbnailRow" class="flex justify-center gap-2 pb-12 select-none">
     <div class="thumbnailContainer"></div>
   </div>
 </dialog>
