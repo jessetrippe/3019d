@@ -8,6 +8,10 @@
 <section id="contact" class="flex flex-col items-center gap-20 py-36">
   <h3 class="text-4xl font-lora">Get in touch</h3>
   <form name="contact" method="POST" data-netlify="true" class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto flex flex-col gap-8">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="hidden">
+      <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+    </p>
     <p class="flex flex-col sm:flex-row gap-8">
       <label class="flex-1 flex flex-col gap-2 border-b">
         <span class="text-sm text-slate-500">First Name</span>
