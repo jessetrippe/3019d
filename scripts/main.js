@@ -8,6 +8,7 @@ function initSlideshow() {
   function showNextImage() {
   images[currentIndex].classList.add('opacity-0');
   currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].classList.remove('hidden');
   images[currentIndex].classList.remove('opacity-0');
   }
 
