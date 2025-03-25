@@ -6,10 +6,24 @@ function initSlideshow() {
   let currentIndex = 0;
 
   function showNextImage() {
-  images[currentIndex].classList.add('opacity-0');
-  currentIndex = (currentIndex + 1) % images.length;
-  images[currentIndex].classList.remove('hidden');
-  images[currentIndex].classList.remove('opacity-0');
+    const currentImage = images[currentIndex];
+    const nextIndex = (currentIndex + 1) % images.length;
+    const nextImage = images[nextIndex];
+
+    // Start fade out
+    currentImage.classList.add('opacity-0');
+
+    // Prepare next image
+    nextImage.classList.remove('hidden'); // reveal if hidden
+    setTimeout(() => {
+      nextImage.classList.remove('opacity-0'); // fade in
+    }, 20); // slight delay to trigger transition
+
+    // After fade completes, hide old image
+    setTimeout(() => {
+      currentImage.classList.add('hidden');
+      currentIndex = nextIndex;
+    }, 1000); // match transition duration
   }
 
   setInterval(showNextImage, 9000);
