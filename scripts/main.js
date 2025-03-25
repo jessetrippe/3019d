@@ -107,7 +107,7 @@ function generateThumbnails() {
 
   imageSrcList.forEach((src, index) => {
     const thumbContainer = document.createElement("div");
-    thumbContainer.className = "thumbnailContainer h-16 w-16 border-2 cursor-pointer flex items-center justify-center opacity-75 hover:opacity-100 transition";
+    thumbContainer.className = "thumbnailContainer h-10 w-10 md:h-16 md:w-16 border-2 cursor-pointer flex items-center justify-center opacity-75 hover:opacity-100 transition";
 
     const thumb = document.createElement("img");
     thumb.src = src;
