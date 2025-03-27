@@ -40,6 +40,7 @@ const nextButton = document.getElementById("nextButton");
 const thumbnailRow = document.getElementById("thumbnailRow");
 const navPhotosLink = document.getElementById("nav-photos-link");
 const navPhotosLink2 = document.getElementById("nav-photos-link2");
+const viewAll = document.getElementById("viewAll");
 const images = document.querySelectorAll("#photo-carousel img");
 
 // Store image sources and current index
@@ -65,6 +66,11 @@ navPhotosLink.addEventListener("click", (e) => {
 });
 
 navPhotosLink2.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent default anchor behavior if it's a <a> tag
+  openModal(0); // Open the modal at the first image
+});
+
+viewAll.addEventListener("click", (e) => {
   e.preventDefault(); // Prevent default anchor behavior if it's a <a> tag
   openModal(0); // Open the modal at the first image
 });
@@ -99,24 +105,6 @@ function updateModalImage() {
 function changeImage(direction) {
   currentImageIndex = (currentImageIndex + direction + imageSrcList.length) % imageSrcList.length;
   updateModalImage();
-}
-
-// Generate thumbnail images below the modal
-function generateThumbnails() {
-  thumbnailRow.innerHTML = ""; // Clear existing thumbnails before regenerating
-
-  imageSrcList.forEach((src, index) => {
-    const thumbContainer = document.createElement("div");
-    thumbContainer.className = "thumbnailContainer h-10 w-10 md:h-16 md:w-16 border-2 cursor-pointer flex items-center justify-center opacity-75 hover:opacity-100 transition";
-
-    const thumb = document.createElement("img");
-    thumb.src = src;
-    thumb.className = "h-full w-full object-cover";
-    thumb.addEventListener("click", () => openModal(index));
-
-    thumbContainer.appendChild(thumb);
-    thumbnailRow.appendChild(thumbContainer);
-  });
 }
 
 // Add event listeners
