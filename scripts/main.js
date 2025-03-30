@@ -74,7 +74,7 @@ function openModal(index) {
 // Close modal and reset image to prevent flash
 function closeModal() {
   modalImage.classList.add("hidden");
-  modalImage.src = ""; // Reset src to prevent flash of previous image
+  modalImage.src = "";
   photoDialog.close();
   photoDialog.style.display = "none";
 }
