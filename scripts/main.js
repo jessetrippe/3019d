@@ -4,6 +4,8 @@ function initSlideshow() {
 
   const images = slideshow.getElementsByTagName('img');
   let currentIndex = 0;
+  
+  images[0].classList.remove('hidden', 'opacity-0');
 
   function showNextImage() {
     const currentImage = images[currentIndex];
@@ -38,8 +40,6 @@ const closeButton = document.getElementById("closeButton");
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 const thumbnailRow = document.getElementById("thumbnailRow");
-const navPhotosLink = document.getElementById("nav-photos-link");
-const navPhotosLink2 = document.getElementById("nav-photos-link2");
 const viewAll = document.getElementById("viewAll");
 const images = document.querySelectorAll("#photo-carousel img");
 
@@ -52,22 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
   photoDialog.close();
   photoDialog.style.display = "none";
   modalImage.classList.add("hidden");
-  generateThumbnails();
 });
 
 // Open modal when an image is clicked
 images.forEach((img, index) => {
   img.addEventListener("click", () => openModal(index));
-});
-
-navPhotosLink.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent default anchor behavior if it's a <a> tag
-  openModal(0); // Open the modal at the first image
-});
-
-navPhotosLink2.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent default anchor behavior if it's a <a> tag
-  openModal(0); // Open the modal at the first image
 });
 
 viewAll.addEventListener("click", (e) => {
@@ -131,10 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleButtonVisibility() {
     if (window.scrollY >= window.innerHeight) {
       openMenuButton.classList.remove("opacity-0");
-      openMenuButton.classList.add("cursor-pointer");
     } else {
       openMenuButton.classList.add("opacity-0");
-      openMenuButton.classList.remove("cursor-pointer");
     }
   }
 
@@ -146,10 +133,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const openMenuButton2 = document.getElementById("openMenuButton2");
   const menu = document.getElementById("verticalMenu");
   const closeMenuButton = document.getElementById("closeMenuButton");
- openMenuButton2.addEventListener("click", toggleMenu);
+  
+  openMenuButton2.addEventListener("click", toggleMenu);
   openMenuButton.addEventListener("click", toggleMenu);
   closeMenuButton.addEventListener("click", toggleMenu);
     
   function toggleMenu() {
-    menu.classList.toggle("translate-x-full");
+    menu.classList.toggle("hidden");
   }
+  
+  const details = document.querySelector('details');
+  document.addEventListener('click', function(e){
+    if(!details.contains(e.target)){
+      details.removeAttribute('open')
+    }
+  })

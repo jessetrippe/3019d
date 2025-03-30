@@ -1,0 +1,82 @@
+  <header class="absolute inset-x-0 top-0 z-50 bg-linear-to-b from-black/30 to-transparent">
+	<nav class="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto" aria-label="Global">
+	  <div class="flex lg:flex-1">
+		<a href="#" class="-m-1.5 p-1.5">
+		  <span class="sr-only">Your Company</span>
+		  <svg class="h-8 w-auto text-white drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 463">
+			<path d="M272 415V306l47-27v109l-47 27Z" fill="currentColor"/>
+			<path d="M105 2 1 183v168l190 110 18-10 1 1-19 11L0 352V182L104 0l296 172v169l-3 2 2-171L105 2Z" fill="currentColor"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M1 183 88 30l17-29 294 171v31l-105-60-84 148v161l-3 1-16 9L1 352V183Z" fill="currentColor"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M381 352V184h19v157l-19 11Z" fill="currentColor"/>
+		  </svg>
+		</a>
+	  </div>
+	  <div class="flex lg:hidden">
+		<button id="openMenuButton2" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 cursor-pointer flex gap-1 text-white">
+		  <span class="sr-only">Open main menu</span>
+		  <svg class="size-6 drop-shadow-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 4.44772 3.44772 4 4 4L20 4C20.5523 4 21 4.44772 21 5C21 5.55229 20.5523 6 20 6L4 6C3.44772 6 3 5.55228 3 5Z" fill="currentColor" />
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.4477 3.44772 11 4 11L20 11C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13L4 13C3.44772 13 3 12.5523 3 12Z" fill="currentColor" />
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M3 19C3 18.4477 3.44772 18 4 18L20 18C20.5523 18 21 18.4477 21 19C21 19.5523 20.5523 20 20 20L4 20C3.44772 20 3 19.5523 3 19Z" fill="currentColor" />
+		  </svg>
+		  <span>Menu</span>
+		</button>
+	  </div>
+	  <div class="hidden lg:flex lg:gap-x-12 drop-shadow-sm">
+		<a href="#overview" class="text-md/6 font-semibold text-white">Overview</a>
+		<a href="#photos" class="text-md/6 font-semibold text-white">Photos</a>
+		<a href="#features" class="text-md/6 font-semibold text-white">Features</a>
+		<a href="#next-steps" class="text-md/6 font-semibold text-white">Next steps</a>
+		<a href="#map" class="text-md/6 font-semibold text-white">Map</a>
+		<a href="#get-in-touch" class="text-md/6 font-semibold text-white">Get in touch</a>
+	  </div>
+	  <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+		<a href="#tour" class="font-semibold text-white drop-shadow-sm">Take a tour <span aria-hidden="true">&rarr;</span></a>
+	  </div>
+	</nav>
+	<div id="verticalMenu" class="hidden" role="dialog" aria-modal="true">
+	  <div class="fixed inset-0 z-50"></div>
+	  <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+		<div class="flex items-center justify-between">
+		  <a href="#" class="-m-1.5 p-1.5">
+			<span class="sr-only">Alki Townhome</span>
+			<img class="h-8 w-auto" src="/images/house-icon.svg" alt="">
+		  </a>
+		  <button id="closeMenuButton" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 cursor-pointer">
+			<span class="sr-only">Close menu</span>
+			<svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M4.11654 18.116C3.62839 18.6041 3.62839 19.3956 4.11654 19.8838C4.6047 20.3719 5.39616 20.3719 5.88431 19.8838L19.8843 5.88376C20.3725 5.39561 20.3725 4.60415 19.8843 4.11599C19.3962 3.62784 18.6047 3.62784 18.1165 4.11599L4.11654 18.116Z" />
+				<path d="M5.88434 4.11599C5.39619 3.62784 4.60473 3.62784 4.11657 4.11599C3.62842 4.60415 3.62842 5.39561 4.11657 5.88376L18.1166 19.8838C18.6047 20.3719 19.3962 20.3719 19.8843 19.8838C20.3725 19.3956 20.3725 18.6041 19.8843 18.116L5.88434 4.11599Z" />
+			  </svg>
+		  </button>
+		</div>
+		<div class="mt-6 flow-root">
+		  <div class="-my-6 divide-y divide-gray-500/10">
+			<div class="space-y-2 py-6">
+				<a href="#overview" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Overview</a>
+				<a href="#tour" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Take a tour</a>
+				<a href="#photos" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Photos</a>
+				<a href="#features" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
+				<a href="#next-steps" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Next steps</a>
+				<a href="#map" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Map</a>
+				<a href="#get-in-touch" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Get in touch</a>
+			</div>
+			<div class="py-6">
+			  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Schedule a showing</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </header>
+<div id="openMenuButton" class="fixed top-0 left-1/2 -translate-x-1/2 w-full flex items-center justify-end p-6 lg:px-8 max-w-7xl mx-auto opacity-0 z-10">
+<button type="button" class="rounded-md transition bg-white px-3.5 py-2.5 font-semibold text-gray-900  drop-shadow-sm hover:bg-gray-50 flex gap-1 items-center cursor-pointer">
+  <span class="sr-only">Open main menu</span>
+	<svg class="size-6 drop-shadow-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 4.44772 3.44772 4 4 4L20 4C20.5523 4 21 4.44772 21 5C21 5.55229 20.5523 6 20 6L4 6C3.44772 6 3 5.55228 3 5Z" fill="currentColor" />
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.4477 3.44772 11 4 11L20 11C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13L4 13C3.44772 13 3 12.5523 3 12Z" fill="currentColor" />
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M3 19C3 18.4477 3.44772 18 4 18L20 18C20.5523 18 21 18.4477 21 19C21 19.5523 20.5523 20 20 20L4 20C3.44772 20 3 19.5523 3 19Z" fill="currentColor" />
+	  </svg>
+	  <span>Menu</span>
+</button>
+</div>
