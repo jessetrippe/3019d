@@ -32,11 +32,11 @@
         <p class="flex flex-col gap-8 sm:flex-row">
           <label class="flex flex-1 flex-col gap-2">
             <span class="text-sm font-semibold">First name</span>
-            <input type="text" name="firstName" class="rounded-lg border border-gray-400 p-2 ring-emerald-700 focus:border-emerald-700 focus:ring-2 focus:outline-0">
+            <input type="text" name="firstName" class="rounded-lg border border-gray-400 p-2 ring-emerald-700 focus:border-emerald-700 focus:ring-2 focus:outline-0" required>
           </label>
           <label class="flex flex-1 flex-col gap-2">
             <span class="text-sm font-semibold">Last name</span>
-            <input type="text" name="lastName" class="rounded-lg border border-gray-400 p-2 ring-emerald-700 focus:border-emerald-700 focus:ring-2 focus:outline-0">
+            <input type="text" name="lastName" class="rounded-lg border border-gray-400 p-2 ring-emerald-700 focus:border-emerald-700 focus:ring-2 focus:outline-0" required>
           </label>
         </p>
         <p class="flex gap-8">
@@ -48,13 +48,13 @@
         <p class="flex gap-8">
           <label class="flex flex-1 flex-col gap-2">
             <span class="text-sm font-semibold">Phone number</span>
-            <input type="tel" name="phone" class="rounded-lg border border-gray-400 p-2 ring-emerald-700 focus:border-emerald-700 focus:ring-2 focus:outline-0">
+            <input type="tel" name="phone" class="rounded-lg border border-gray-400 p-2 ring-emerald-700 focus:border-emerald-700 focus:ring-2 focus:outline-0" pattern="[0-9]{10}">
           </label>
         </p>
         <p class="flex gap-8">
           <label class="flex flex-1 flex-col gap-2">
             <span class="text-sm font-semibold">Message</span>
-            <textarea name="comment" class="rounded-lg border border-gray-400 p-2 ring-emerald-700 focus:border-emerald-700 focus:ring-2 focus:outline-0"></textarea>
+            <textarea name="comment" class="rounded-lg border border-gray-400 p-2 ring-emerald-700 focus:border-emerald-700 focus:ring-2 focus:outline-0" required minlength="10"></textarea>
           </label>
         </p>
         <p class="flex justify-end gap-8">
