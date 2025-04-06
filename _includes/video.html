@@ -1,0 +1,31 @@
+<section id="video" class="mx-auto flex max-w-7xl flex-col gap-12 p-6 py-12 sm:py-24 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+	<h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">Video walkthrough</h2>
+	<p class="mt-6 text-lg/8 text-gray-600">Take a personal tour through the home—from the living room to the rooftop deck—without ever leaving your screen.</p>
+  </div>
+  <div id="videoContainer" class="">
+	  <iframe 
+	  	class="w-full aspect-video"
+		src="https://www.youtube.com/embed/f6bshxsYtIM?si=sxWA9F74RP-m_S19?rel=0"
+		title="YouTube video player"
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		allowfullscreen
+	></iframe>
+  </div>
+  <dialog id="videoDialog" class="bg-opacity-75 fixed inset-0 m-0 h-screen max-h-full w-screen max-w-full flex-col justify-between bg-black">
+	<div class="flex justify-end">
+	  <button id="closeButton" class="m-2 cursor-pointer rounded-full border border-transparent p-1 transition hover:border-white/40 focus:outline-0 md:m-6 md:p-2">
+		<svg class="h-5 w-5 fill-white md:h-8 md:w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+		  <path d="M4.11654 18.116C3.62839 18.6041 3.62839 19.3956 4.11654 19.8838C4.6047 20.3719 5.39616 20.3719 5.88431 19.8838L19.8843 5.88376C20.3725 5.39561 20.3725 4.60415 19.8843 4.11599C19.3962 3.62784 18.6047 3.62784 18.1165 4.11599L4.11654 18.116Z" />
+		  <path d="M5.88434 4.11599C5.39619 3.62784 4.60473 3.62784 4.11657 4.11599C3.62842 4.60415 3.62842 5.39561 4.11657 5.88376L18.1166 19.8838C18.6047 20.3719 19.3962 20.3719 19.8843 19.8838C20.3725 19.3956 20.3725 18.6041 19.8843 18.116L5.88434 4.11599Z" />
+		</svg>
+		<span class="sr-only">Close</span>
+	  </button>
+	</div>
+	<div class="flex flex-1 items-center justify-between select-none">
+		<img id="video" class="hidden" src="/images/3019d_02.webp" alt="Expanded View">
+	</div>
+  </dialog>
+</section>
