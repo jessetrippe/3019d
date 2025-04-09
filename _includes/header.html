@@ -35,7 +35,7 @@
 	  </div>
 	</nav>
 	<div id="verticalMenu" class="hidden" role="dialog" aria-modal="true">
-	  <div class="fixed inset-0 z-50"></div>
+	  <div id="menuBackdrop" class="fixed inset-0 z-50"></div>
 	  <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
 		<div class="flex items-center justify-between">
 		  <a href="#" class="-m-1.5 p-1.5">
@@ -70,8 +70,8 @@
 	  </div>
 	</div>
   </header>
-<div id="openMenuButton" class="fixed top-0 left-1/2 -translate-x-1/2 w-full flex items-center justify-end p-6 lg:px-8 max-w-7xl mx-auto opacity-0 z-10">
-<button type="button" class="rounded-md transition bg-white px-3.5 py-2.5 font-semibold text-gray-900  drop-shadow-sm hover:bg-gray-50 flex gap-1 items-center cursor-pointer">
+<div id="openMenuButtonContainer" class="fixed top-0 left-1/2 -translate-x-1/2 w-full flex items-center justify-end p-6 lg:px-8 max-w-7xl mx-auto opacity-0 z-10">
+<button id="openMenuButton" type="button" class="rounded-md transition bg-white px-3.5 py-2.5 font-semibold text-gray-900  drop-shadow-sm hover:bg-gray-50 flex gap-1 items-center cursor-pointer">
   <span class="sr-only">Open main menu</span>
 	<svg class="size-6 drop-shadow-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 4.44772 3.44772 4 4 4L20 4C20.5523 4 21 4.44772 21 5C21 5.55229 20.5523 6 20 6L4 6C3.44772 6 3 5.55228 3 5Z" fill="currentColor" />

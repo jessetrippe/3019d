@@ -115,13 +115,13 @@ photoDialog.addEventListener("click", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const openMenuButton = document.getElementById("openMenuButton");
+  const openMenuButtonContainer = document.getElementById("openMenuButtonContainer");
 
   function toggleButtonVisibility() {
     if (window.scrollY >= window.innerHeight) {
-      openMenuButton.classList.remove("opacity-0");
+      openMenuButtonContainer.classList.remove("opacity-0");
     } else {
-      openMenuButton.classList.add("opacity-0");
+      openMenuButtonContainer.classList.add("opacity-0");
     }
   }
 
@@ -130,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
   const openMenuButton = document.getElementById("openMenuButton");
+  const menuBackdrop = document.getElementById("menuBackdrop");
   const openMenuButton2 = document.getElementById("openMenuButton2");
   const menu = document.getElementById("verticalMenu");
   const closeMenuButton = document.getElementById("closeMenuButton");
@@ -137,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
   openMenuButton2.addEventListener("click", toggleMenu);
   openMenuButton.addEventListener("click", toggleMenu);
   closeMenuButton.addEventListener("click", toggleMenu);
+  menuBackdrop.addEventListener("click", toggleMenu);
     
   function toggleMenu() {
     menu.classList.toggle("hidden");
