@@ -9,8 +9,8 @@
     "build": "npm run clean && npm run jekyll:build && npm run css:build"
   },
   "devDependencies": {
-    "postcss": "8.5.3",
     "concurrently": "^8.2.2",
-    "tailwindcss": "^4.0.14"
+    "postcss": "8.5.3",
+    "tailwindcss": "^4.1.4"
   }
 }
