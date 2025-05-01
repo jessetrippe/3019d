@@ -81,13 +81,10 @@ function closeModal() {
 
 // Update modal image
 function updateModalImage() {
-  modalImage.src = imageSrcList[currentImageIndex];
+  const originalSrc = imageSrcList[currentImageIndex];
+  const highResSrc = originalSrc.replace(/-\d+\.webp$/, '-2000.webp');
+  modalImage.src = highResSrc;
   modalImage.classList.remove("hidden");
-
-  // Highlight selected thumbnail
-  document.querySelectorAll(".thumbnail").forEach((thumb, i) => {
-    thumb.classList.toggle("active-thumbnail", i === currentImageIndex);
-  });
 }
 
 // Navigate images
